@@ -26,3 +26,6 @@ pygame.display.set_caption("Racing Game!")
 
 # Set the font
 MAIN_FONT = pygame.font.SysFont("comicsans", 44)
+
+# FPS 
+FPS = 60
