@@ -109,3 +109,18 @@ class AbstractCar:
         self.x, self.y = self.START_POS
         self.angle = 0
         self.vel = 0
+
+# PlayerCar class
+class PlayerCar(AbstractCar):
+    IMG = RED_CAR
+    START_POS = (180, 200)
+
+    def reduce_speed(self):
+        self.vel = max(self.vel - self.acceleration / 2, 0)
+        self.move()
+
+    def bounce(self):
+        self.vel = - self.vel
+        self.move()
+
+
