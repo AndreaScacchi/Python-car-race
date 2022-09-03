@@ -6,7 +6,7 @@ pygame.font.init()
 
 # Load and scale other images
 GRASS = scale_image(pygame.image.load("imgs/grass.jpg"), 2.5)
-TRACK = scale_image(pygame.image.load("imgs/track.jpg"), 0.9)
+TRACK = scale_image(pygame.image.load("imgs/track.png"), 0.9)
 
 # Load and scale track and finish images
 TRACK_BORDER = scale_image(pygame.image.load("imgs/track-border.png"), 0.9)
