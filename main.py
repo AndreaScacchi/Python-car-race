@@ -33,6 +33,7 @@ FPS = 60
 # Computer car path 
 PATH = [(175, 106), (115, 68), (64, 262), (47, 402), (122, 555), (231, 658), (399, 728), (430, 527), (519, 480), (608, 588), (629, 707), (724, 593), (723, 395), (616, 361), (414, 329), (489, 265), (712, 246), (729, 146), (565, 79), (373, 85), (287, 197), (283, 389), (175, 346), (177, 262)]
 
+# GameInfo class 
 class GameInfo:
     LEVELS = 10
 
@@ -62,6 +63,7 @@ class GameInfo:
             return 0
         return round(time.time() - self.level_start_time)
 
+# AbstractCar class
 class AbstractCar:
     def __init__(self, max_vel, rotation_vel):
         self.img = self.IMG
