@@ -32,3 +32,32 @@ FPS = 60
 
 # Computer car path 
 PATH = [(175, 106), (115, 68), (64, 262), (47, 402), (122, 555), (231, 658), (399, 728), (430, 527), (519, 480), (608, 588), (629, 707), (724, 593), (723, 395), (616, 361), (414, 329), (489, 265), (712, 246), (729, 146), (565, 79), (373, 85), (287, 197), (283, 389), (175, 346), (177, 262)]
+
+class GameInfo:
+    LEVELS = 10
+
+    def __init__(self, level=1):
+        self.level = level
+        self.started = False
+        self.level_start_time = 0
+
+    def next_level(self):
+        self.level += 1
+        self.started = False
+
+    def reset(self):
+        self.level = 1
+        self.started = False
+        self.level_start_time = 0
+
+    def game_finished(self):
+        return self.level > self.LEVELS 
+
+    def start_level(self):
+        self.started = True
+        self.level_start_time = time.time()
+
+    def get_level_time(self):
+        if not self.started:
+            return 0
+        return round(time.time() - self.level_start_time)
